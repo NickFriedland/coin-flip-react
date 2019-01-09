@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlipCoin /> matches snapshot 1`] = `
+<div>
+  <Coin
+    url="coin-heads.png"
+  />
+  <button
+    id="flip"
+    onClick={[Function]}
+  />
+  <p>
+    Out of 
+    0
+     flips, there have been 
+    0
+     heads and 
+    0
+     tails
+  </p>
+</div>
+`;

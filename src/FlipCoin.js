@@ -43,7 +43,7 @@ class FlipCoin extends Component {
     return (
       <div>
         <Coin url={this.props.urls[this.state.coinState]} />
-        <button onClick={this.flipCoin} />
+        <button id="flip" onClick={this.flipCoin} />
         <p>
           Out of {this.state.numHeads + this.state.numTails} flips, there have
           been {this.state.numHeads} heads and {this.state.numTails} tails
