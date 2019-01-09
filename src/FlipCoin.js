@@ -31,7 +31,9 @@ class FlipCoin extends Component {
 
   countOutcome() {
     this.setState(curState => {
-      curState.coinState ? curState.numHeads++ : curState.numTails++;
+      return curState.coinState
+        ? { numTails: curState.numTails + 1 }
+        : { numHeads: curState.numHeads + 1 };
     });
   }
   // random select 0 or 1 for coin
@@ -44,8 +46,7 @@ class FlipCoin extends Component {
         <button onClick={this.flipCoin} />
         <p>
           Out of {this.state.numHeads + this.state.numTails} flips, there have
-          been {this.state.numHeads} heads and
-          {this.state.numTails} tails
+          been {this.state.numHeads} heads and {this.state.numTails} tails
         </p>
       </div>
     );
